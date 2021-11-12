@@ -65,7 +65,7 @@ router.put('/passsrecovery/:email', async (req, res, next) => {
     mailSender(
       email,
       "Recuperar contraseña",
-      `<h2>Este es un correo de confimación para cambio de contraseña. Click aquí para setear contraseña <a href='http://localhost:3000/${token}>CLICK ME</a></h2>`
+      '<h1>Este es un correo de confimación para cambio de contraseña</h1><p> Click aquí para setear contraseña <a href="`http://localhost:3000/${token}">CLICK ME.</></hp>'
       );
       return res.status(200).json({msg: "El enlace para la recuperación de la contraseña ha sido enviado a su correo.", token: token});
     }else{
